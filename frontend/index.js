@@ -1,12 +1,12 @@
 let allY00ts;
 
 const init = async () => {
-    let data = (await axios.get("http://127.0.0.1:5001/getY00ts")).data;
+    let data = (await axios.get("https://api.y00ts-stats.tech/getY00ts")).data;
     allY00ts = data;
-    let traitPrices = (await axios.get("http://127.0.0.1:5001/getTraitPrices")).data;
+    let traitPrices = (await axios.get("https://api.y00ts-stats.tech/getTraitPrices")).data;
 
-    let t00bsFP = (await axios.get("http://127.0.0.1:5001/getT00bsFP")).data;
-    let y00tsFP = (await axios.get("http://127.0.0.1:5001/getY00tsFP")).data;
+    let t00bsFP = (await axios.get("https://api.y00ts-stats.tech/getT00bsFP")).data;
+    let y00tsFP = (await axios.get("https://api.y00ts-stats.tech/getY00tsFP")).data;
 
     let maxLoss = Math.round(t00bsFP - y00tsFP);
     
